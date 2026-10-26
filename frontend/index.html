@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101820" />
+    <title>Real-Time Speech Dialogue</title>
+    <link rel="stylesheet" href="/style.css?v=publication-v2" />
+  </head>
+  <body>
+    <header class="topbar">
+      <!-- User-supplied originals are displayed unchanged; IfN needs white backing. -->
+      <div class="brand"><div class="university"><img class="university-seal" src="/branding/logo_tubs.jfif" alt="TU Braunschweig seal" /><span>Technische Universität<br><strong>Braunschweig</strong></span></div><div class="institute"><div class="logo-backing"><img class="ifn-logo" src="/branding/logo_IFN.svg?v=publication-v2" alt="IfN · Institut für Nachrichtentechnik" /></div></div></div>
+      <h1 class="demo-tag">Real-Time Speech Dialogue</h1>
+    </header>
+    <main>
+      <section class="mode-picker" aria-label="Conversation architecture">
+        <button class="mode selected" data-mode="nemotron" aria-pressed="true">
+          <span class="mode-copy"><span class="mode-title">Full-Duplex</span><span id="end-to-end-name" class="mode-subtitle">Moshi (7B)</span></span>
+          <span class="mode-state"><span class="selection-label">● SELECTED</span><span id="end-to-end-readiness" class="readiness">CHECKING</span></span>
+        </button>
+        <button class="mode" data-mode="modular" aria-pressed="false">
+          <span class="mode-copy"><span class="mode-title">Modular Pipeline</span><span class="mode-subtitle">VAD → STT (0.6B) → LLM (4B) → TTS (1.7B)</span></span>
+          <span class="mode-state"><span class="selection-label">SELECT</span><span id="modular-readiness" class="readiness">CHECKING</span></span>
+        </button>
+      </section>
+      <section class="workspace">
+        <article class="conversation-card" aria-label="Live conversation">
+          <div class="card-heading"><span id="architecture-label" class="pill">END-TO-END · FULL-DUPLEX</span><span id="measurement-badge" hidden></span></div>
+          <div class="live-activity">
+            <div class="live-state"><span id="live-state-dot" class="dot"></span><h2 id="live-state">Connecting…</h2></div>
+            <div class="activity-signals">
+              <div id="input-signal" class="signal"><span>MICROPHONE</span><div class="signal-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small id="input-state">Microphone off</small></div>
+              <div id="output-signal" class="signal"><span>SPEAKER</span><div class="signal-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small id="output-state">Quiet</small></div>
+            </div>
+          </div>
+          <div class="transcript-shell">
+            <div id="messages" class="messages" role="log" aria-label="Conversation history" tabindex="0"><p class="empty">Start the demo to begin a conversation.</p></div>
+            <button id="latest-button" class="secondary latest" hidden>↓ Return to live</button>
+          </div>
+        </article>
+        <aside class="side-column">
+          <section class="camera-card">
+            <div class="side-heading"><h2>Camera</h2><button id="camera-button" class="text-button">Enable</button></div>
+            <div class="camera-preview"><video id="camera" autoplay muted playsinline hidden></video><span id="camera-off">Camera off</span></div>
+            <span class="camera-note">Local preview only</span>
+          </section>
+          <section class="session-card">
+            <div class="connection"><span id="status-dot" class="dot"></span><span id="status-text">Connecting…</span></div>
+            <h2 id="backend-name">Moshi (7B)</h2>
+            <div class="primary-metric"><span id="primary-metric-label">DEMO TIME</span><strong id="primary-metric">0.0 s</strong><span id="primary-metric-note">Ready to start</span></div>
+          </section>
+        </aside>
+      </section>
+      <div id="architecture" class="architecture end-to-end" aria-label="Audio flow"></div>
+      <footer class="controls">
+        <button id="mic-button" class="mic-button" aria-label="Start demo"><span>Start Demo</span></button>
+        <button id="reset-button" class="secondary">Reset</button>
+        <button id="details-button" class="secondary" aria-haspopup="dialog" aria-controls="technical-details">Details</button>
+      </footer>
+    </main>
+    <dialog id="technical-details" aria-labelledby="details-title">
+      <div class="drawer-heading"><h2 id="details-title">Technical details</h2><button id="close-details" class="secondary" aria-label="Close technical details">Close</button></div>
+      <p class="hint">Frontend build: <code id="frontend-build">Loading client…</code></p>
+      <section class="advanced-controls"><h3>Advanced controls</h3><button id="reconnect-button" class="secondary">Connect / reconnect</button><button id="interrupt-button" class="secondary" disabled>Clear local playback</button><p id="mic-note" class="hint"></p></section>
+      <section id="technical-transcript-panel" hidden><h3>Backend user transcript</h3><p class="hint">Shown only when the backend supplies text; Full-Duplex presentation uses audio activity.</p><div id="technical-user-transcript"></div></section>
+          <section class="metrics-card">
+            <div class="side-heading"><div><h2>Turn timings</h2><span id="metrics-label">No measurement</span></div><span class="info">i</span></div>
+            <dl>
+              <div><dt>Speech started</dt><dd id="m-speech-start">—</dd></div>
+              <div><dt>Speech ended</dt><dd id="m-speech-end">—</dd></div>
+              <div><dt>First transcript</dt><dd id="m-transcript">—</dd></div>
+              <div><dt>First assistant text</dt><dd id="m-assistant-text">—</dd></div>
+              <div><dt>Assistant text completed</dt><dd id="m-utterance-end">—</dd></div>
+              <div><dt>First audio received</dt><dd id="m-audio">—</dd></div>
+              <div><dt>First audio rendered</dt><dd id="m-playback">—</dd></div>
+              <div class="strong"><dt>Speech end → audio</dt><dd id="m-end-audio">—</dd></div>
+              <div><dt>Response event duration</dt><dd id="m-response-duration">—</dd></div>
+              <div><dt>STT / LLM duration / TTS TTFA</dt><dd id="m-stages">N/A</dd></div>
+            </dl>
+            <p id="metrics-contract" class="hint">Timings include transport and browser scheduling.</p>
+          </section>
+          <details class="settings-card">
+            <summary>Developer settings and simulation</summary>
+            <section class="model-picker" aria-label="End-to-end model">
+              <label>End-to-end model
+                <select id="end-to-end-model">
+                  <option value="moshi">Moshi (7B)</option>
+                  <option value="nemotron">NemotronLabs VoiceChat 11B</option>
+                </select>
+              </label>
+              <span>Nemotron: <b id="nemotron-readiness">CHECKING</b></span>
+              <span>Moshi: <b id="moshi-readiness">CHECKING</b></span>
+              <span id="model-availability">Select an already loaded model.</span>
+            </section>
+
+            <details id="operator-controls" hidden>
+              <summary>Operator: replace resident end-to-end model</summary>
+              <p>Loading replaces the current model on its GPU. Modular stays warm. Architecture selection does not reload models.</p>
+              <button id="load-model" class="secondary">Load selected end-to-end model</button>
+              <span id="slot-status">Supervisor not configured</span>
+            </details>
+            <div class="input-monitor" aria-label="Microphone input diagnostics">
+              <label for="input-level">Microphone level</label>
+              <meter id="input-level" min="-60" max="0" value="-60">No input</meter>
+              <p id="input-monitor-status" class="hint">Microphone stopped · no captured audio.</p>
+              <p class="hint">Signal level does not prove speech recognition. Upload counts include silence; WebSocket send is not a server acknowledgement.</p>
+            </div>
+            <button id="mock-button" class="secondary">Run simulated turn</button>
+            <label>Microphone processing (next microphone start)
+              <select id="microphone-processing">
+                <option value="voice">Voice enhancement (default)</option>
+                <option value="echo">Echo cancellation only</option>
+                <option value="raw">Unprocessed (use headphones)</option>
+              </select>
+            </label>
+            <p class="hint">Compare recognition of quiet word onsets with noise suppression and automatic gain control disabled.</p>
+            <label><input id="record-input" type="checkbox" /> Record next 30 s of uploaded microphone audio locally</label>
+            <button id="download-input" class="secondary" disabled>Download input WAV</button>
+            <p id="input-diagnostics" class="hint">Input recording is off. No diagnostic audio is saved automatically.</p>
+            <p class="hint">The WAV contains the exact PCM queued for upload (24 kHz mono), after browser microphone processing. Listen for your complete question. Nothing is saved automatically or uploaded for diagnostic transcription.</p>
+            <label>Nemotron WebSocket<input id="nemotron-url" type="url" placeholder="from VOICE_DEMO_NEMOTRON_URL" /></label>
+            <label>HF modular WebSocket<input id="modular-url" type="url" placeholder="from VOICE_DEMO_MODULAR_URL" /></label>
+            <label>Moshi adapter WebSocket<input id="moshi-url" type="url" placeholder="from VOICE_DEMO_MOSHI_URL" /></label>
+            <label>Mock response delay (ms)<input id="mock-delay" type="number" min="0" max="2000" step="50" value="180" /></label>
+            <label>Mock chunk jitter (ms)<input id="mock-jitter" type="number" min="0" max="1000" step="25" value="25" /></label>
+            <label>Temporary stall burst (ms)<input id="mock-stall" type="number" min="0" max="2000" step="50" value="0" /></label>
+            <label>Added server event latency (ms)<input id="mock-network-delay" type="number" min="0" max="200" step="50" value="0" /></label>
+            <label>Server event jitter ± (ms)<input id="mock-network-jitter" type="number" min="0" max="50" step="10" value="0" /></label>
+            <button id="mock-disconnect" class="secondary">Simulate server disconnect</button>
+            <button id="mock-malformed" class="secondary">Simulate malformed event</button>
+            <p>Mock timing and audio are synthetic. Camera frames are not included in realtime requests. Model processes must already be running.</p>
+          </details>
+
+    </dialog>
+    <script type="module" src="/app.js?v=publication-v2"></script>
+  </body>
+</html>

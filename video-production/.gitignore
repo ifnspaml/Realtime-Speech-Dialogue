@@ -1,0 +1,14 @@
+raw/
+private/
+normalized/
+cache/
+rendered/
+exports/
+node_modules/
+.env
+*.mkv
+*.mp4
+*.mov
+*.wav
+*.flac
+*.obs

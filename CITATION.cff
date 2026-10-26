@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Please cite this software and the upstream models/frameworks you use; see docs/citation.md."
+type: software
+title: "Real-Time Speech Dialogue"
+authors:
+  - family-names: "Li"
+    given-names: "Zhengyang"
+    affiliation: "Institute for Communications Technology (IfN), TU Braunschweig"
+    website: "https://github.com/joyolee"
+repository-code: "https://github.com/ifnspaml/Realtime-Speech-Dialogue"
+url: "https://github.com/ifnspaml/Realtime-Speech-Dialogue"
+license: Apache-2.0
+abstract: "A shared browser interface and backend integration for comparing modular speech dialogue with full-duplex Moshi."
+keywords:
+  - speech-to-speech
+  - voice-ai
+  - full-duplex
+  - moshi
+  - real-time-dialogue

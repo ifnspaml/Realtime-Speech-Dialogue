@@ -1,0 +1,10 @@
+{
+  "image": "nvcr.io/nim/nvidia/nemotron-labs-voicechat",
+  "manifest_digest": "sha256:6e69ff2aac955be2cb65b0de4f5b6d7c0b5e45ca0a1d42a2b153e9b54efb059b",
+  "model_repository": "nim/nvidia/nemotron-labs-voicechat:1.0.0",
+  "files": {
+    "nemotron-voicechat-client.py": "643689f2f5eace85161f74ebf5c90087a140a41d4c77d05c71a0143ce3c3ec55",
+    "audio_server.py": "db188cac479571928eb6d0e6b9b31de5b49af94d8e769960473438db497a7a20"
+  },
+  "modifications": []
+}

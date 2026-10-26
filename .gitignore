@@ -1,0 +1,59 @@
+# Downloaded models, upstream repositories, and local environments.
+/models/
+/third_party/
+/.venv*/
+/envs/
+/.cache/
+/node_modules/
+
+# Generated recordings, measurements, and process state.
+/artifacts/
+/logs/
+/runtime/
+/build/
+/dist/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+coverage/
+*.log
+slurm-*.out
+
+# Local credentials and agent configuration.
+/.aws/
+/.codex/
+/.agents/
+/.env
+/.env.*
+!/.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Weight files, inference containers, and downloaded archives.
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.onnx
+*.h5
+*.hdf5
+*.engine
+*.gguf
+*.ggml
+*.sif
+*.tar
+*.tar.gz
+*.tgz
+*.tar.zst
+*.zip
+*.deb
+
+# Only handwritten synthetic event fixtures are versioned.
+# Generated replay tones and test recordings remain in ignored artifacts/.
+.DS_Store
+Thumbs.db

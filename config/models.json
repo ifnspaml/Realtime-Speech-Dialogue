@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "key": "moshi",
+      "backend": "moshi",
+      "repo_id": "kyutai/moshiko-pytorch-bf16",
+      "revision": "2bfc9ae6e89079a5cc7ed2a68436010d91a3d289",
+      "license": "cc-by-4.0",
+      "checkpoint_tensor_entries": 7687729152,
+      "files": {
+        "model.safetensors": {
+          "bytes": 15375500136,
+          "sha256": "5b835c664f3830bf453808cbca9bfbcc9de332c328cc01cbffdfbaba2a8838a7"
+        },
+        "tokenizer-e351c8d8-checkpoint125.safetensors": {
+          "bytes": 384644900,
+          "sha256": "09b782f0629851a271227fb9d36db65c041790365f11bbe5d3d59369cf863f50"
+        },
+        "tokenizer_spm_32k_3.model": {
+          "bytes": 552778,
+          "sha256": "78d4336533ddc26f9acf7250d7fb83492152196c6ea4212c841df76933f18d2d"
+        }
+      },
+      "note": "Pinned runtime files; no weights are included in Git."
+    },
+    {
+      "key": "stt",
+      "backend": "modular",
+      "repo_id": "nvidia/parakeet-tdt-0.6b-v3",
+      "revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+      "license": "cc-by-4.0",
+      "checkpoint_tensor_entries": 627057286,
+      "files": {
+        "parakeet-tdt-0.6b-v3.nemo": {
+          "bytes": 2509332480,
+          "sha256": "3cbdc85877e668ca7b82d0d56770eb1fac76691f55d6b97545e8d61ca588d10d"
+        }
+      },
+      "note": "Pinned runtime files; no weights are included in Git."
+    },
+    {
+      "key": "gguf",
+      "backend": "modular",
+      "repo_id": "Serveurperso/Qwen3-TTS-GGUF",
+      "revision": "b7ee2e8c7459c3bea99da23e3d178125a7d1713c",
+      "license": "apache-2.0",
+      "checkpoint_tensor_entries": null,
+      "files": {
+        "qwen-talker-1.7b-customvoice-BF16.gguf": {
+          "bytes": 3839585664,
+          "sha256": "dd5d70d3f7d09ffc707f4c25eabb1773e0f1f568e02c17ca72a08592334c276c"
+        },
+        "qwen-tokenizer-12hz-BF16.gguf": {
+          "bytes": 358980384,
+          "sha256": "cc04d7352ff4cb339435cdccf59cf38e6e92f3cf789bc94a6a1b467093bafa18"
+        }
+      },
+      "note": "Pinned runtime files; no weights are included in Git."
+    },
+    {
+      "key": "eot",
+      "backend": "modular",
+      "repo_id": "pipecat-ai/smart-turn-v3",
+      "revision": "f766f81d3cfdf7737ac64aad813d91bbfd56bf93",
+      "license": "bsd-2-clause",
+      "checkpoint_tensor_entries": null,
+      "files": {
+        "smart-turn-v3.2-cpu.onnx": {
+          "bytes": 8679182,
+          "sha256": "2bb026316b14a660486a75b1733cd3fbab8c2fd0314dc9af7be49f8cca967e4f"
+        }
+      },
+      "note": "Pinned runtime files; no weights are included in Git."
+    },
+    {
+      "key": "llm",
+      "backend": "modular",
+      "repo_id": "Qwen/Qwen3-4B-Instruct-2507",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "license": "apache-2.0",
+      "checkpoint_tensor_entries": 4022468096,
+      "files": {
+        "LICENSE": {
+          "bytes": 11343,
+          "git_blob_sha1": "6634c8cc3133b3848ec74b9f275acaaa1ea618ab"
+        },
+        "config.json": {
+          "bytes": 727,
+          "git_blob_sha1": "6988f134db143052042f2bd6e0c897bc6a605189"
+        },
+        "generation_config.json": {
+          "bytes": 238,
+          "git_blob_sha1": "432531a002c181a19de338313d2375e9d7494d7e"
+        },
+        "merges.txt": {
+          "bytes": 1671839,
+          "git_blob_sha1": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0"
+        },
+        "model-00001-of-00003.safetensors": {
+          "bytes": 3957900840,
+          "sha256": "75311d91bb08cf0b882913da464a1e722a31fb44db35208663487efb7a3d8ed6"
+        },
+        "model-00002-of-00003.safetensors": {
+          "bytes": 3987450520,
+          "sha256": "0b48adbb1f60e901153d91907ba11ce63bd4b8b584482e730f48808d055dfba1"
+        },
+        "model-00003-of-00003.safetensors": {
+          "bytes": 99630640,
+          "sha256": "7dd39ccca5e4de123c74c14af44c9bf2eb75df33b4614382af0134528e060d5d"
+        },
+        "model.safetensors.index.json": {
+          "bytes": 32819,
+          "git_blob_sha1": "4747b0297d3109f14db49886972e3369c9a00b2a"
+        },
+        "tokenizer.json": {
+          "bytes": 11422654,
+          "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "tokenizer_config.json": {
+          "bytes": 9377,
+          "git_blob_sha1": "51c1be0d9192e7f6e6596de71d0f07d58fbc32ac"
+        },
+        "vocab.json": {
+          "bytes": 2776833,
+          "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569"
+        }
+      },
+      "note": "Pinned runtime files; no weights are included in Git."
+    },
+    {
+      "key": "tts",
+      "backend": "modular",
+      "repo_id": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+      "revision": "0c0e3051f131929182e2c023b9537f8b1c68adfe",
+      "license": "apache-2.0",
+      "checkpoint_tensor_entries": 1916676352,
+      "files": {
+        "config.json": {
+          "bytes": 4908,
+          "git_blob_sha1": "95d74b20b7485f5dfa09d05988d6c606ec226811"
+        }
+      },
+      "note": "Provenance/configuration only; GGML inference uses the separately pinned converted GGUF files."
+    }
+  ],
+  "upstreams": {
+    "speech_to_speech": {
+      "repository": "https://github.com/huggingface/speech-to-speech",
+      "commit": "81b688b452ee6b64ff5745b91985e9eb653fcc9f"
+    },
+    "silero": {
+      "repository": "https://github.com/snakers4/silero-vad",
+      "commit": "5cd7945676eb32225748052e2e6a0580e4686a08",
+      "version": "6.2.3",
+      "torch_hub_directory": "snakers4_silero-vad_master",
+      "jit_file": "src/silero_vad/data/silero_vad.jit",
+      "jit_sha256": "e1122837f4154c511485fe0b9c64455f7b929c96fbb8d79fbdb336383ebd3720",
+      "license": "MIT",
+      "files": {
+        "LICENSE": {
+          "bytes": 1075,
+          "git_blob_sha1": "0bf5e90cac691b999d4a35044f97167d7bbbf0b9"
+        },
+        "hubconf.py": {
+          "bytes": 1978,
+          "git_blob_sha1": "48e89bae266c071b0ed84b6c3458258e5aa15a20"
+        },
+        "src/silero_vad/__init__.py": {
+          "bytes": 1288,
+          "git_blob_sha1": "910001a6233f9ba54c4ac41e94bddf8301d87557"
+        },
+        "src/silero_vad/data/__init__.py": {
+          "bytes": 0,
+          "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        "src/silero_vad/data/silero_vad.jit": {
+          "bytes": 2272526,
+          "git_blob_sha1": "5c6988d663950a93a5f0d6c38c2fe024653ec552"
+        },
+        "src/silero_vad/model.py": {
+          "bytes": 1504,
+          "git_blob_sha1": "99955ee6f37604c0164e381c55c37d0a2adec330"
+        },
+        "src/silero_vad/sequence_vad.py": {
+          "bytes": 8420,
+          "git_blob_sha1": "be694a12170ca170c59923b4b977bbebabf83a55"
+        },
+        "src/silero_vad/tinygrad_model.py": {
+          "bytes": 2563,
+          "git_blob_sha1": "38108c133aeeb4fa2e0ff6ffe99f9a1bcd90a53e"
+        },
+        "src/silero_vad/utils_vad.py": {
+          "bytes": 30979,
+          "git_blob_sha1": "11c2454888df829c270a25c402fa91f43d413e26"
+        }
+      }
+    },
+    "moshi_package": {
+      "repository": "https://github.com/kyutai-labs/moshi",
+      "version": "0.2.13",
+      "source_archive": "https://files.pythonhosted.org/packages/12/22/7caa82b67ef874d7dc126b91591b7a8349250b48d2e999aa1d5284446c9b/moshi-0.2.13.tar.gz",
+      "source_sha256": "f0c83aea037b1e2e3aefe5f9c2e77a0d6b5ec9b7d4e986e259990f6636706eac",
+      "downstream_version": "0.2.13+ifn.1",
+      "patch": "scripts/build_moshi.py (HTTP dependency bound, version and build tooling only)"
+    }
+  },
+  "nltk_data": {
+    "repository": "https://github.com/nltk/nltk_data",
+    "commit": "550b6625bcef1f2abff2ff770a5a0d272c9c6b2a",
+    "packages": [
+      "punkt_tab",
+      "averaged_perceptron_tagger_eng"
+    ],
+    "archives": {
+      "punkt_tab": {
+        "url": "https://raw.githubusercontent.com/nltk/nltk_data/550b6625bcef1f2abff2ff770a5a0d272c9c6b2a/packages/tokenizers/punkt_tab.zip",
+        "sha256": "e57f64187974277726a3417ca6f181ec5403676c717672eef6a748a7b20e0106",
+        "bytes": 4319076,
+        "directory": "tokenizers"
+      },
+      "averaged_perceptron_tagger_eng": {
+        "url": "https://raw.githubusercontent.com/nltk/nltk_data/550b6625bcef1f2abff2ff770a5a0d272c9c6b2a/packages/taggers/averaged_perceptron_tagger_eng.zip",
+        "sha256": "6025f530624335c67d6547d44757b357b4e79bae030a0383e9887a92c1718f0b",
+        "bytes": 1539115,
+        "directory": "taggers"
+      }
+    }
+  },
+  "size_labels": {
+    "moshi": "7B model family; checkpoint metadata contains 7,687,729,152 tensor entries",
+    "stt": "0.6B family; metadata contains 627,057,286 tensor entries",
+    "llm": "4B family; metadata contains 4,022,468,096 tensor entries",
+    "tts": "1.7B family; upstream full checkpoint metadata contains 1,916,676,352 tensor entries",
+    "vad": "Silero VAD plus separate Smart Turn v3.2 endpointing; approximately 8M refers to Smart Turn, not Silero"
+  }
+}

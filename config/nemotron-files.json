@@ -1,0 +1,121 @@
+{
+  "model_version": "1.0.0",
+  "base_url": "https://api.ngc.nvidia.com/v2/models/nim/nvidia/nemotron-labs-voicechat/versions/1.0.0/files",
+  "files": [
+    {
+      "path": "nemotron-voicechat/1/README.md",
+      "sizeInBytes": 1255,
+      "sha256_base64": "WLlTP3PxA0jBzi7gVGcnHFxl1P315Ds88aukTY+1JtE="
+    },
+    {
+      "path": "nemotron-voicechat/1/codec.safetensors",
+      "sizeInBytes": 799797164,
+      "sha256_base64": "t2I73oij5hDy5SMAPnsWAuG9Z/cKHMmsqKWzgBwyafk="
+    },
+    {
+      "path": "nemotron-voicechat/1/config.json",
+      "sizeInBytes": 31986,
+      "sha256_base64": "E0Y8NONMfLCFgMUxarv8XK85LTxpeHg0vSlPZQszaaY="
+    },
+    {
+      "path": "nemotron-voicechat/1/eartts_vllm/config.json",
+      "sizeInBytes": 2426,
+      "sha256_base64": "/AUVKtNLOY7/7asVYJu2hGHUohih8y0PuigGubVsLRY="
+    },
+    {
+      "path": "nemotron-voicechat/1/eartts_vllm/model.safetensors",
+      "sizeInBytes": 3337214236,
+      "sha256_base64": "o2S+h2YkLeSGHmmdfCDaiPSPOazBC45wNhvAFg1dkW0="
+    },
+    {
+      "path": "nemotron-voicechat/1/eartts_vllm/model.safetensors.index.json",
+      "sizeInBytes": 35069,
+      "sha256_base64": "LBd95+v/o/aVqc5zFWGlCdqDtFGGWeVmoEy6+GPSamo="
+    },
+    {
+      "path": "nemotron-voicechat/1/eartts_vllm/tts_model_init_inputs.pt",
+      "sizeInBytes": 183101,
+      "sha256_base64": "l44Su+olpEmkb6PMJvzkv5O429q2JdwoSkTgTDi9c34="
+    },
+    {
+      "path": "nemotron-voicechat/1/embeddings.safetensors",
+      "sizeInBytes": 2348810344,
+      "sha256_base64": "hyf8KghLL9M11zW3laAQ0zTJ68abdWbUEhxSZpQKdtY="
+    },
+    {
+      "path": "nemotron-voicechat/1/nano-v2-vllm/chat_template.jinja",
+      "sizeInBytes": 4070,
+      "sha256_base64": "t6OlIKS8G+rmol1hX5IVWA347qkm9IglbCvvdAOUM8A="
+    },
+    {
+      "path": "nemotron-voicechat/1/nano-v2-vllm/config.json",
+      "sizeInBytes": 1784,
+      "sha256_base64": "EnsPMpQg0YwyPyBN6fm8Ysn31/JILR01OEs3xZDGm1o="
+    },
+    {
+      "path": "nemotron-voicechat/1/nano-v2-vllm/configuration_nemotron_h.py",
+      "sizeInBytes": 12176,
+      "sha256_base64": "GBhiBGIkMcM2p8KBOoDw03k33eliuK693yTK9b/6A/c="
+    },
+    {
+      "path": "nemotron-voicechat/1/nano-v2-vllm/model.safetensors",
+      "sizeInBytes": 37901759424,
+      "sha256_base64": "G0c0UhAzYoF+lAjPhkqo74ypKkjvj9lMs9QPp88U5Es="
+    },
+    {
+      "path": "nemotron-voicechat/1/nano-v2-vllm/tokenizer.json",
+      "sizeInBytes": 17078330,
+      "sha256_base64": "MnfAD+X7OWOzy3wHt/GDci0q9Nd1pK6nz7NoTXzMvC8="
+    },
+    {
+      "path": "nemotron-voicechat/1/nano-v2-vllm/tokenizer_config.json",
+      "sizeInBytes": 367,
+      "sha256_base64": "/W+njVC4J6zoVr6U9QlBGg9ufLIuZGcKBc4nFhJ2mm0="
+    },
+    {
+      "path": "nemotron-voicechat/1/perception.safetensors",
+      "sizeInBytes": 2455141656,
+      "sha256_base64": "khjumB9WzGnm/v6VB3QLWFbuh/sonSXRqurzH/d1qgA="
+    },
+    {
+      "path": "nemotron-voicechat/1/rnnt-asr.safetensors",
+      "sizeInBytes": 35774020,
+      "sha256_base64": "RxZ/xdcGNhevcwBgmqb2Gqwy3N6lPvJpII8suTixSy8="
+    },
+    {
+      "path": "nemotron-voicechat/1/rnnt_tokenizer/tokenizer.model",
+      "sizeInBytes": 251056,
+      "sha256_base64": "B9TlpjhApTqy1NEG0odHaBQ/s/vdR5OLORDS2gW/sKk="
+    },
+    {
+      "path": "nemotron-voicechat/1/rnnt_tokenizer/tokenizer_config.json",
+      "sizeInBytes": 268,
+      "sha256_base64": "EOOTQiGVcI2dEx9m3aCUMNxHLT99NsPk/QpRNb9ICbA="
+    },
+    {
+      "path": "nemotron-voicechat/1/rnnt_tokenizer/vocab.json",
+      "sizeInBytes": 9242,
+      "sha256_base64": "NQUfeVzsIjUhgNOj0qE4P/vg2WjNFASa1tolRJLzZ44="
+    },
+    {
+      "path": "nemotron-voicechat/1/tokenizer/chat_template.jinja",
+      "sizeInBytes": 4070,
+      "sha256_base64": "t6OlIKS8G+rmol1hX5IVWA347qkm9IglbCvvdAOUM8A="
+    },
+    {
+      "path": "nemotron-voicechat/1/tokenizer/tokenizer.json",
+      "sizeInBytes": 17078330,
+      "sha256_base64": "MnfAD+X7OWOzy3wHt/GDci0q9Nd1pK6nz7NoTXzMvC8="
+    },
+    {
+      "path": "nemotron-voicechat/1/tokenizer/tokenizer_config.json",
+      "sizeInBytes": 367,
+      "sha256_base64": "/W+njVC4J6zoVr6U9QlBGg9ufLIuZGcKBc4nFhJ2mm0="
+    },
+    {
+      "path": "nemotron-voicechat/config.pbtxt",
+      "sizeInBytes": 1344,
+      "sha256_base64": "t16p7sEgJWkX2//T6lTZgtd0GbvxRfnZBNqk/4Wgtqs="
+    }
+  ]
+}

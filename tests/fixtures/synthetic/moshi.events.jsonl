@@ -1,0 +1,6 @@
+{"received_ms": 0, "event": {"type": "session.created", "session": {"id": "synthetic-session", "model": "moshi", "measurement": "synthetic", "capabilities": {"user_transcript": false, "speech_boundaries": false, "response_scope": "session"}}}}
+{"received_ms": 30, "event": {"type": "session.updated", "session": {"id": "synthetic-session"}}}
+{"received_ms": 60, "event": {"type": "response.created", "response": {"id": "synthetic-response", "status": "in_progress", "scope": "session"}}}
+{"received_ms": 90, "event": {"type": "response.output_audio_transcript.delta", "response_id": "synthetic-response", "item_id": "synthetic-assistant", "delta": "This is a synthetic fixture tone, not a model response."}}
+{"received_ms": 120, "event": {"type": "response.output_audio.delta", "response_id": "synthetic-response", "item_id": "synthetic-assistant", "audio_metadata": {"bytes": 9600, "sha256": "d3e207402da2aa9e3b484466934d6756c42be569ef6f3b26c12f75e9408a7085"}}}
+{"received_ms": 150, "event": {"type": "session.end", "origin": "moshi_adapter", "stats": {"output_samples": 4800}}}

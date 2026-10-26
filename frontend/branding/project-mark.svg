@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 40" fill="none" aria-hidden="true">
+  <!-- Original project mark: dual speech branches meeting a center waveform. -->
+  <path d="M6 20c4.5-9 9-9 13.5 0s9 9 13.5 0 9-9 13.5 0 9 9 13.5 0" stroke="#83dfcd" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18 8.5c-6.5 4.2-6.5 18.8 0 23" stroke="#aabac1" stroke-width="2.25" stroke-linecap="round"/>
+  <path d="M46 8.5c6.5 4.2 6.5 18.8 0 23" stroke="#aabac1" stroke-width="2.25" stroke-linecap="round"/>
+  <circle cx="32" cy="20" r="2.4" fill="#83dfcd"/>
+</svg>

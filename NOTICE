@@ -1,0 +1,15 @@
+Real-Time Speech Dialogue
+Copyright 2026 Zhengyang Li and project contributors.
+
+Developed at the Institute for Communications Technology (IfN), TU Braunschweig.
+This project provides a shared speech dialogue interface, transport adapters,
+backend integration and deployment tooling. It builds on third-party models
+and software; their authorship, licenses and notices remain applicable.
+
+Adapted Hugging Face speech-to-speech frontend worklets and PCM helpers retain
+Apache-2.0 and their modification notice under frontend/vendor/hf-demo/.
+See THIRD_PARTY_NOTICES.md for additional upstream attribution and model terms.
+
+The original TU Braunschweig seal and IfN logo are included at the maintainer’s
+request for this private repository. They retain separate rights and are not
+licensed under Apache-2.0. See assets/branding/README.md before public distribution.

@@ -1,0 +1,16 @@
+{"type":"session.created","session":{"id":"fixture-hf","model":"hf-modular"}}
+{"type":"session.updated","session":{"audio":{"input":{"format":{"type":"audio/pcm","rate":24000}},"output":{"format":{"type":"audio/pcm","rate":24000}}}}}
+{"type":"input_audio_buffer.speech_started","item_id":"hf-u1"}
+{"type":"conversation.item.input_audio_transcription.delta","item_id":"hf-u1","delta":"Hello"}
+{"type":"conversation.item.input_audio_transcription.completed","item_id":"hf-u1","transcript":"Hello there."}
+{"type":"input_audio_buffer.speech_stopped","item_id":"hf-u1"}
+{"type":"response.created","response":{"id":"hf-r1","status":"in_progress"}}
+{"type":"response.output_item.added","item_id":"hf-a1","output_index":0}
+{"type":"response.content_part.added","item_id":"hf-a1","content_index":0}
+{"type":"response.output_audio_transcript.delta","item_id":"hf-a1","delta":"Hi there."}
+{"type":"response.output_audio.delta","item_id":"hf-a1","content_index":0,"delta":"AAAAAA=="}
+{"type":"response.output_audio.done","item_id":"hf-a1","content_index":0}
+{"type":"response.output_audio_transcript.done","item_id":"hf-a1","transcript":"Hi there."}
+{"type":"response.content_part.done","item_id":"hf-a1","content_index":0}
+{"type":"response.output_item.done","item_id":"hf-a1","output_index":0}
+{"type":"response.done","response":{"id":"hf-r1","status":"completed"}}
